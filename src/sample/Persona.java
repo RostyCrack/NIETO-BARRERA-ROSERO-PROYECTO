@@ -1,21 +1,21 @@
+
 package sample;
 
 public class Persona {
-
     private String name;
-    private String lastName;
-    private String causeOfDeath;
+    private String death;
+    private double age;
 
     public Persona(){
-        this.name = "N/A";
-        this.lastName = "N/A";
-        this.causeOfDeath = "N/A";
+        this.name="";
+        this.death="";
+        this.age= 0;
     }
 
-    public Persona(String name, String lastName, String causeOfDeath){
-        this.name = name;
-        this.lastName = lastName;
-        this.causeOfDeath = causeOfDeath;
+    public Persona(String name, String death, double age){
+        this.name=name;
+        this.death=death;
+        this.age=age;
     }
 
     public String getName() {
@@ -26,19 +26,20 @@ public class Persona {
         this.name = name;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getDeath() {
+        return death;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setDeath(String death) {
+        this.death = death;
     }
 
-    public String getCauseOfDeath() {
-        return causeOfDeath;
+    public double getAge() {
+        return age;
     }
 
-    public void setCauseOfDeath(String causeOfDeath) {
-        this.causeOfDeath = causeOfDeath;
+    public void setAge(int age) {
+        this.age = age;
     }
 }
+
