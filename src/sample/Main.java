@@ -37,19 +37,19 @@ public class Main extends Application {
         window.setTitle("ColombianRiot");
 
         //Name Column
-        TableColumn<Persona, String> nameColumn= new TableColumn<>("name");
+        TableColumn<Persona, String> nameColumn= new TableColumn<>("nombre");
         nameColumn.setMinWidth(200);
         nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
 
 
         //Death Column
-        TableColumn<Persona, String> deathColumn= new TableColumn<>("death");
-        deathColumn.setMinWidth(100);
+        TableColumn<Persona, String> deathColumn= new TableColumn<>("causa de muerte");
+        deathColumn.setMinWidth(300);
         deathColumn.setCellValueFactory(new PropertyValueFactory<>("death"));
 
         //Age Column
-        TableColumn<Persona, Double> ageColumn= new TableColumn<>("age");
-        ageColumn.setMinWidth(200);
+        TableColumn<Persona, Double> ageColumn= new TableColumn<>("edad");
+        ageColumn.setMinWidth(50);
         ageColumn.setCellValueFactory(new PropertyValueFactory<>("age"));
 
         // Name input
@@ -60,18 +60,18 @@ public class Main extends Application {
         // Death input
         deathInput= new TextField();
         deathInput.setPromptText("muerte");
-        deathInput.setMinWidth(100);
+        deathInput.setMinWidth(200);
 
         // Age input
         ageInput = new TextField();
         ageInput.setPromptText("edad");
-        ageInput.setMinWidth(100);
+        ageInput.setMinWidth(50);
 
         //button
         Button addButton = new Button ("Agregar");
         addButton.setOnAction(e -> addButtonClicked());
         Button deleteButton = new Button ("Eliminar");
-        addButton.setOnAction(e -> deleteButtonClicked());
+        //addButton.setOnAction(e -> deleteButtonClicked());
 
         HBox hBox = new HBox ();
         hBox.setPadding(new Insets(10,10,10,10));
@@ -106,13 +106,13 @@ public class Main extends Application {
     }
 
     //Delete button clicked
-    public void deleteButtonClicked() {
-        ObservableList<Persona> personaSelected, allPersonas;
-        allPersonas = table.getItems();
-        personaSelected = table.getSelectionModel().getSelectedItems();
+    //public void deleteButtonClicked() {
+        //ObservableList<Persona> personaSelected, allPersonas;
+        //allPersonas = table.getItems();
+        //personaSelected = table.getSelectionModel().getSelectedItems();
 
-        personaSelected.forEach(allPersonas::remove);
-    }
+        //personaSelected.forEach();
+  // }
 
 
 
