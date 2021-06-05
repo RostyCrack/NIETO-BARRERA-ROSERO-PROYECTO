@@ -11,7 +11,7 @@ public class Persona {
         this.age= 0;
     }
 
-    public Persona(String name, String death, double age){
+    public Persona(String name, String death, double age) throws PersonaException{
         this.name=name;
         this.death=death;
         this.age=age;
